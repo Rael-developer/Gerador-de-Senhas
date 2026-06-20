@@ -1,5 +1,7 @@
 # 🛡️ Password Guardian // Israel Tech
 
+![Password Guardian Preview](Preview.png)
+
 Uma aplicação web moderna (estilo Dark/Cyberpunk Tech) desenvolvida para sanar uma das maiores vulnerabilidades atuais: a reutilização de credenciais fracas.
 
 ## 🔴 O Problema
