@@ -1,0 +1,9 @@
+# Arquivos de sistema e caches de editores Android
+.vscode/
+.idea/
+.acode/
+.trebedit/
+*.log
+.DS_Store
+Thumbs.db
+

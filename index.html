@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Israel Tech | Password Guardian v2</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PASSWORD // GUARDIAN</h1>
+            <p>Gere senhas criptograficamente seguras e verifique vazamentos globais com privacidade total.</p>
+        </header>
+
+        <div class="grid">
+            <section class="card">
+                <h2>01. Gerador de Senhas</h2>
+                
+                <div class="result-container">
+                    <input type="text" id="generated-password" readonly placeholder="A senha aparecerá aqui">
+                    <button id="copy-btn" class="btn-secondary">Copiar</button>
+                </div>
+
+                <div class="control-group">
+                    <label for="length-slider">Comprimento: <span id="length-val">16</span> caracteres</label>
+                    <input type="range" id="length-slider" min="8" max="32" value="16">
+                </div>
+
+                <div class="options-grid">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="chk-uppercase" checked>
+                        <span class="checkmark"></span> Maiúsculas (A-Z)
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="chk-lowercase" checked>
+                        <span class="checkmark"></span> Minúsculas (a-z)
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="chk-numbers" checked>
+                        <span class="checkmark"></span> Números (0-9)
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="chk-symbols" checked>
+                        <span class="checkmark"></span> Símbolos (!@#$)
+                    </label>
+                </div>
+
+                <button id="generate-btn" class="btn-primary">Gerar Senha Segura</button>
+            </section>
+
+            <section class="card">
+                <h2>02. Analisador de Segurança</h2>
+                
+                <div class="control-group">
+                    <label for="password-input">Digite uma senha para análise:</label>
+                    <input type="password" id="password-input" placeholder="Análise em tempo real...">
+                </div>
+
+                <div class="strength-meter-container">
+                    <div id="strength-bar" class="strength-bar"></div>
+                </div>
+                <div class="strength-text">Força: <span id="strength-label">Inexistente</span></div>
+
+                <ul class="requirements-list">
+                    <li id="req-length" class="invalid">Pelo menos 12 caracteres</li>
+                    <li id="req-upper" class="invalid">Contém letras maiúscula (A-Z)</li>
+                    <li id="req-lower" class="invalid">Contém letras minúscula (a-z)</li>
+                    <li id="req-number" class="invalid">Contém números (0-9)</li>
+                    <li id="req-symbol" class="invalid">Contém símbolos (!@#$...)</li>
+                </ul>
+
+                <div id="leak-status" class="leak-status"></div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por <span class="author-name">Israel Rodrigues</span> // Israel Tech © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
